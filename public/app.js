@@ -1,5 +1,5 @@
-"use strict";
 // const anchor = document.querySelector("a")!
+import { Invoice } from "./class/invoice.js";
 // console.log(anchor.href)
 const form = document.querySelector(".new-item-form");
 // console.log(form.children)
@@ -16,3 +16,5 @@ form.addEventListener("submit", (e) => {
         amount: amount.valueAsNumber
     }));
 });
+const invOne = new Invoice("Jack", "Dinner", 30);
+console.log(invOne.format());
