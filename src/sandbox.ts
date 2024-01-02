@@ -39,3 +39,19 @@ ninja = {
 console.log(ninja)
 
 console.log("new workflow")
+
+type Person = {
+    name: string,
+    age: number
+}
+
+function greet(person:Person) {
+    console.log(`hello my name is ${person.name}, I am ${person.age} years old`)
+}
+
+const jack: Person = {
+    name: "Jack",
+    age: 20
+}
+
+greet(jack)

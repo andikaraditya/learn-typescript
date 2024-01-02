@@ -24,3 +24,11 @@ ninja = {
 };
 console.log(ninja);
 console.log("new workflow");
+function greet(person) {
+    console.log(`hello my name is ${person.name}, I am ${person.age} years old`);
+}
+const jack = {
+    name: "Jack",
+    age: 20
+};
+greet(jack);
