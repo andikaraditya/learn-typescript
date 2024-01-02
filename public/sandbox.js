@@ -1,24 +1,26 @@
+"use strict";
 console.log("Typescript");
 function circ(diameter) {
     return diameter * Math.PI;
 }
 console.log(circ(20));
-var names = [];
+const names = [];
 names.push("John");
 names.push("Jack");
 console.log(names);
-var ages = [];
+const ages = [];
 ages.push(20);
 ages.push(25);
 console.log(ages);
-var mixed = [];
+const mixed = [];
 mixed.push("John");
 mixed.push(20);
 console.log(mixed);
-var ninja;
+let ninja;
 ninja = {
     name: "jack",
     age: 20,
     beltColor: "black"
 };
 console.log(ninja);
+console.log("new workflow");

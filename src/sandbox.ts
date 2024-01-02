@@ -37,3 +37,5 @@ ninja = {
 }
 
 console.log(ninja)
+
+console.log("new workflow")
