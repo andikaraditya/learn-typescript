@@ -1,4 +1,5 @@
 import { Invoice } from "./class/invoice.js"
+import { ListTemplate } from "./class/ListTemplate.js";
 import { Payment } from "./class/Payment.js"
 import { HasFormatter } from "./interfaces/HasFormatter.js";
 
@@ -8,6 +9,9 @@ const type = document.querySelector("#type") as HTMLSelectElement
 const toFrom = document.querySelector("#tofrom") as HTMLInputElement
 const details = document.querySelector("#details") as HTMLInputElement
 const amount = document.querySelector("#amount") as HTMLInputElement
+
+const ul = document.querySelector("ul")!
+const list = new ListTemplate(ul)
 
 form.addEventListener("submit", (e) => {
     e.preventDefault()
@@ -20,7 +24,7 @@ form.addEventListener("submit", (e) => {
         doc = new Payment(toFrom.value, details.value, amount.valueAsNumber)
     }
 
-    console.log(doc)
+    list.render(doc, type.value, "end")
 })
 
 // const invOne = new Invoice("Jack", "Dinner", 30)
@@ -50,13 +54,13 @@ form.addEventListener("submit", (e) => {
 
 // greetPerson(jack)
 
-let docOne: HasFormatter
-let docTwo: HasFormatter
+// let docOne: HasFormatter
+// let docTwo: HasFormatter
 
-docOne = new Invoice("Yoshi", "dinner", 50)
-docTwo = new Payment("Mario", "lunch", 20)
+// docOne = new Invoice("Yoshi", "dinner", 50)
+// docTwo = new Payment("Mario", "lunch", 20)
 
-const docs: HasFormatter[] = []
+// const docs: HasFormatter[] = []
 
-docs.push(docOne)
-docs.push(docTwo)
+// docs.push(docOne)
+// docs.push(docTwo)
